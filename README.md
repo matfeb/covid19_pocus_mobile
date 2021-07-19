@@ -1,25 +1,21 @@
-# **Automatic Detection of COVID-19 from Ultrasound Data**
-![Node.js CI](https://github.com/jannisborn/covid19_pocus_ultrasound/workflows/Node.js%20CI/badge.svg)
-[![Build Status](https://travis-ci.com/jannisborn/covid19_ultrasound.svg?branch=master)](https://travis-ci.com/jannisborn/covid19_ultrasound)
+# **Automatic Detection of COVID-19 for POCUS on Mobile Device**
 
 ## Summary
 
 ### News
-This repo contains the code for the paper `Accelerating Detection of Lung Pathologies with Explainable Ultrasound Image Analysis` which is now [available](https://www.mdpi.com/2076-3417/11/2/672). Please [cite](#Citation) that one instead of our preprint.
+WORK IN PROGRESS.
+This repo is a fork of https://github.com/jannisborn/covid19_ultrasound which contains the code for the paper `Accelerating Detection of Lung Pathologies with Explainable Ultrasound Image Analysis`.
+
 
 ### Goal
-This is an ongoing ultrasound data collection initiative for COVID-19. Please help growing the [database](data/README.md).
+This is an ongoing ultrasound data collection initiative for COVID-19. Please help growing the [database](https://github.com/jannisborn/covid19_ultrasound/data/README.md).
 
 ### Dataset
-Feel free to use (and cite) our dataset. We currently have >200 LUS videos. For details see [data/README.md](data/README.md).
+Feel free to use (and cite) the paper dataset. They currently have >200 LUS videos. For details see [https://github.com/jannisborn/covid19_ultrasound/data/README.md](https://github.com/jannisborn/covid19_ultrasound/data/README.md).
 Please note: The founders/authors of the repository take no responsibility or liability for the data contributed to this archive. The contributing sites have to ensure that the collection and use of the data fulfills all applicable legal and ethical requirements.
 
 ## Contribution
-<p align="center">
-	<img src="pocovidnet/plots/overview.png" alt="photo not available" width="100%" height="100%">
-	<br>
-   <em>Overview figure about current efforts. Public dataset consists of >200 LUS videos.</em>
-</p>
+Work in progress
 
 ### Motivation:
 From the ML community, ultrasound has gained much less attention than CT and X-Ray in the context of COVID-19.
@@ -33,72 +29,30 @@ Our dataset complements the current data collection initiaves that only focus
 on CT or X-Ray data. 
 
 #### Evidence for ultrasound
-Ultrasound is **non-invasive**, **cheap**, **portable** (bedside execution),
+From https://github.com/jannisborn/covid19_ultrasound
+> Ultrasound is **non-invasive**, **cheap**, **portable** (bedside execution),
 **repeatable** and **available in almost all medical facilities**. But even for
 trained doctors detecting patterns of COVID-19 from ultrasound data is challenging and
 time-consuming. Since their time is scarce, there is an urgent need to simplify,
 fasten & automatize the detection of COVID-19.
-   - [LUS is more sensitive than X-Ray in diagnosing COVID-19](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7390587/) 
-   - [COVID-19 outbreak: less stethoscope, more ultrasound](https://www.thelancet.com/journals/lanres/article/PIIS2213-2600(20)30120-X/fulltext?fbclid=IwAR2kDbxpYTSjoj3Nl_B-nOhLZL66mQLUBVBCdzn6zEG5ObLKq9oXhPZDXHQ)
-   - Ultrasound can evidence the same symptoms as CT: ([Point-by-point correspondance of CT
-     and ultrasound findings through COVID-19 disease process](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7165267/)) 
-
-#### Learn more about the project
-- [**Read our manuscript**](https://www.mdpi.com/2076-3417/11/2/672)
-- Read our [blogpost](https://towardsdatascience.com/ultrasound-for-covid-19-a-deep-learning-approach-f7906002892a)
   
 ## Installation 
 
 ### Ultrasound data
-Find all details on the current state of the database in the [data](data)
+Find all details on the current state of the database in the [data](https://github.com/jannisborn/covid19_ultrasound/data)
 folder.
 
-### Deep learning model (`pocovidnet`)
-Find all details on how to reproduce our experiments and train your models on
-ultrasound data in the [pocovidnet](pocovidnet) folder.
+### Deep learning model (`pocovidmobile`)
 
-### Web interface (`pocovidscreen`)
-Find all details on how to get started in the [pocovidscreen](pocovidscreen)
-folder.
 
 ## Contact 
 - If you experience problems with the code, please open an
-[issue](https://github.com/jannisborn/covid19_pocus_ultrasound/issues).
-- If you have questions about the project, please reach out: `jborn@ethz.ch`.
+[issue](https://github.com/matfeb/covid19_pocus_mobile/issues).
+- If you have questions about the project, please reach out: `mathieu.febvay@eric.univ-lyon2.fr`.
 
 # Citation
-An [abstract of our work was published](https://thorax.bmj.com/content/76/Suppl_1/A230.2) in *Thorax* as part of the BTS Winter Meeting 2021. 
-The full paper is available via the COVID-19 special issue of [Applied Sciences](https://www.mdpi.com/2076-3417/11/2/672).
-Please cite these in favor of our deprecated [POCOVID-Net preprint](https://arxiv.org/abs/2004.12084).
 
 Please use the following bibtex entries:
 ```bib
-@article{born2021accelerating,
-  title={Accelerating Detection of Lung Pathologies with Explainable Ultrasound Image Analysis}, 
-  author={Born, Jannis and Wiedemann, Nina and Cossio, Manuel and Buhre, Charlotte and Brändle, Gabriel and Leidermann, Konstantin and      Aujayeb, Avinash and Moor, Michael and Rieck, Bastian and Borgwardt, Karsten}, 
-  volume={11}, ISSN={2076-3417}, 
-  url={http://dx.doi.org/10.3390/app11020672}, 
-  DOI={10.3390/app11020672}, 
-  number={2}, 
-  journal={Applied Sciences}, 
-  publisher={MDPI AG}, 
-  year={2021}, 
-  month={Jan}, 
-  pages={672}
-}
 
-@article {born2021l2,
-  author = {Born, J and Wiedemann, N and Cossio, M and Buhre, C and Br{\"a}ndle, G and Leidermann, K and Aujayeb, A},
-  title = {L2 Accelerating COVID-19 differential diagnosis with explainable ultrasound image analysis: an AI tool},
-  volume = {76},
-  number = {Suppl 1},
-  pages = {A230--A231},
-  year = {2021},
-  doi = {10.1136/thorax-2020-BTSabstracts.404},
-  publisher = {BMJ Publishing Group Ltd},
-  issn = {0040-6376},
-  URL = {https://thorax.bmj.com/content/76/Suppl_1/A230.2},
-  eprint = {https://thorax.bmj.com/content/76/Suppl_1/A230.2.full.pdf},
-  journal = {Thorax}
-}
 ```
